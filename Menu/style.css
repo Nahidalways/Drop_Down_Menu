@@ -1,0 +1,92 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ======================
+ Menu Style
+====================================*/
+.header_menu{}
+.header_menu ul {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	list-style: none;
+}
+.header_menu ul li {
+	display: inline-block;
+	position: relative;
+}
+.header_menu ul li a {
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	font-size: 20px;
+	color: #000;
+  transition: .5s;
+}
+/* Drop Down Style */
+.header_menu ul ul {
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	width: 200px;
+  text-align: left;
+  background: red;
+}
+.header_menu ul ul li{
+  display: block;
+}
+.header_menu ul ul li a{
+  color: #fff;
+}
+/* Hover Style */
+.header_menu ul li:hover > a{
+  color: #fff;
+  background: #ffacaa;
+}
+.header_menu ul ul{
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+  transform: scaleY(0);
+  transform-origin: top center;
+}
+.header_menu ul li:hover ul{
+  transform: scaleY(1);
+  opacity: 1;
+  visibility: visible;
+  
+}
+/* Second Dropdown Menu */
+.header_menu ul ul li{
+  position: relative;
+}
+.header_menu ul ul ul{
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+.header_menu ul ul ul li{
+  display: block;
+}
+
+/* Hover Style Secondary */
+
+.header_menu ul li:hover ul ul{
+  opacity: 0;
+  visibility: hidden;
+}
+.header_menu ul ul ul{
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s;
+  transform: scaleY(0);
+  transform-origin: top center;
+}
+.header_menu ul ul li:hover ul{
+  transform: scaleY(1);
+  opacity: 1;
+  visibility: visible;
+}
